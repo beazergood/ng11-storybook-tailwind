@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 <div class="bg-gray-50">
   <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
     <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-      <span class="block">Ready to dive in?</span>
+      <span class="block">{{ header }}</span>
       <span class="block text-indigo-600">Start your free trial today.</span>
     </h2>
     <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
@@ -28,4 +28,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wyhh-web';
+  @Input()
+  header!: string;
+  
 }
